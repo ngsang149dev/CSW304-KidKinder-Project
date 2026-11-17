@@ -39,6 +39,14 @@ header .logo-menu {
     z-index: 1;
 }
 
+header .logo-menu .navbar {
+    --bs-navbar-padding-y: 0;
+    --bs-navbar-toggler-border-radius: 50rem;
+    --bs-navbar-toggler-padding-y: 0.5rem;
+    --bs-navbar-toggler-padding-x: 1rem;
+    --bs-navbar-toggler-border-color: rgba(0, 51, 79, 0.18);
+}
+
 /* Logo */
 header .logo h1 {
     color: var(--primary-color);
@@ -55,9 +63,8 @@ header .logo h1::before {
 
 /* Nav bar */
 .main-menu {
-    display: flex;
     justify-content: center;
-    padding: 10px 50px;
+    padding: 10px 0;
 }
 
 .main-menu>li>a {
@@ -234,7 +241,7 @@ header .logo h1::before {
     color: var(--secondary-color);
 }
 
-.about-us .col-md-3 > img {
+.about-us .col-md-3>img {
     border-radius: 5px;
 }
 
@@ -442,7 +449,7 @@ header .logo h1::before {
 
 .book-a-seat form {
     margin: 20px auto 10px;
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 .book-a-seat .col-md-5 table {
@@ -513,6 +520,7 @@ header .logo h1::before {
     text-align: center;
     margin: 40px auto 80px;
 }
+
 .latest-blog h5 {
     color: var(--primary-color);
     font-size: 17px;
@@ -521,7 +529,8 @@ header .logo h1::before {
     justify-content: center;
 }
 
-.latest-blog h5::after, .latest-blog h5::before {
+.latest-blog h5::after,
+.latest-blog h5::before {
     content: "";
     width: 50px;
     height: 2px;
@@ -562,7 +571,7 @@ header .logo h1::before {
     align-items: center;
     gap: 18px;
     padding: 0;
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 13px;
 }
 
@@ -594,7 +603,7 @@ header .logo h1::before {
     height: 35px;
     border-radius: 30px;
     color: white;
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* Footer */
@@ -797,4 +806,219 @@ footer .go-to-top {
 .go-to-top:hover {
     background-color: var(--secondary-color);
     color: white;
+}
+
+/* Responsive header */
+@media (min-width: 768px) {
+    .main-menu {
+        padding: 10px 20px;
+    }
+
+    header .logo-menu .navbar-collapse {
+        justify-content: center;
+    }
+
+    .introduction h3 {
+        margin-top: -100px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    /* Header */
+    header .logo-menu {
+        padding: 24px 0;
+    }
+
+    header .logo-menu .navbar-toggler {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        font-size: 16px;
+        border: 1px solid rgba(0, 51, 79, 0.15);
+        border-radius: 50%;
+    }
+
+    .main-menu {
+        padding: 10px 0;
+    }
+
+    .main-menu>li>a {
+        display: block;
+        padding: 4px 12px;
+    }
+
+    .logo-menu h1 {
+        font-size: 50px;
+        font-weight: 800;
+        margin-bottom: 0;
+    }
+
+    /* Introduction */
+    .introduction {
+        padding-top: 40px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .introduction h3 {
+        margin-top: 25px;
+        font-size: 22px;
+    }
+
+    .introduction h1 {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 40px;
+        padding: 10px 0 0;
+    }
+
+    .introduction .content {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .introduction button {
+        width: 180px;
+    }
+
+    .introduction .col-md-6>img {
+        margin-top: 20px;
+    }
+
+    /* Service */
+    .service {
+        margin: 50px 0;
+    }
+
+    .service .item {
+        width: 100%;
+    }
+
+    .service i {
+        width: 55px;
+        padding-left: 8px;
+        font-size: 28px;
+    }
+
+    .service h2 {
+        font-size: 24px;
+    }
+
+    .service p {
+        font-size: 15px;
+    }
+
+    /* About us */
+    .about-us {
+        margin-bottom: 40px;
+    }
+
+    .about-us article h5,
+    .classes h5,
+    .book-a-seat .col-md-7 h5,
+    .latest-blog h5 {
+        font-size: 14px;
+    }
+
+    .about-us .col-md-7 {
+        padding-top: 30px;
+    }
+
+    .about-us article h2 {
+        font-size: 30px;
+    }
+
+    .about-us .col-md-7 .col-md-3 {
+        width: 40%;
+    }
+
+    .about-us .col-md-7 .col-md-9 {
+        width: 60%;
+    }
+
+    .about-us .col-md-7 .col-md-9>ul {
+        margin-left: 0;
+    }
+
+    /* Classes */
+    .classes h2 {
+        font-size: 30px;
+    }
+
+    .classes article {
+        margin-bottom: 40px;
+    }
+
+    .classes article>p {
+        width: 85%;
+    }
+
+    /* Book a seat */
+    .book-a-seat .col-md-7 h2 {
+        font-size: 30px;
+    }
+
+    .book-a-seat .col-md-7>p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .book-a-seat .col-md-7 .list>p {
+        font-size: 16px;
+    }
+
+    .book-a-seat .col-md-5 {
+        margin-top: 40px;
+    }
+
+    .book-a-seat .col-md-5 th {
+        font-size: 32px;
+    }
+
+    .book-a-seat .col-md-5 input,
+    .book-a-seat .col-md-5 select,
+    .book-a-seat .col-md-5 button {
+        width: 80%;
+    }
+
+    /* Latest blog */
+    .latest-blog h2 {
+        font-size: 30px;
+    }
+
+    .latest-blog article {
+        margin-bottom: 40px;
+    }
+
+    .latest-blog .content h3 {
+        font-size: 28px;
+    }
+
+    .latest-blog .content p {
+        width: 90%;
+    }
+
+    /* Footer */
+    footer .col-md-3>.content {
+        width: 100%;
+    }
+
+    footer input,
+    footer .newsletter button {
+        width: 100%;
+    }
+
+    footer>.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer .col-md-12 {
+        padding: 30px 12px;
+    }
 }
