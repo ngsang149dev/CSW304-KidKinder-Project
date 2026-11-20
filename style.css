@@ -15,6 +15,11 @@ html {
 }
 
 /* Common style */
+.container {
+    max-width: none;
+    padding: 0 50px;
+}
+
 a {
     text-decoration: none;
 }
@@ -33,23 +38,27 @@ h2 {
 header .logo-menu {
     font-family: 'Nunito', sans-serif;
     align-items: center;
-    padding-top: 10px;
+    height: 94px;
+    padding-top: 0;
     background-color: #fff;
-    box-shadow: 0px 18px 31px 5px rgba(0, 0, 0, 0.56);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
     z-index: 1;
 }
 
 header .logo-menu .navbar {
-    --bs-navbar-padding-y: 0;
-    --bs-navbar-toggler-border-radius: 50rem;
-    --bs-navbar-toggler-padding-y: 0.5rem;
-    --bs-navbar-toggler-padding-x: 1rem;
-    --bs-navbar-toggler-border-color: rgba(0, 51, 79, 0.18);
+    min-height: 94px;
 }
+
+header .logo-menu .navbar-collapse {
+    justify-content: center;
+}
+
 
 /* Logo */
 header .logo h1 {
     color: var(--primary-color);
+    margin-bottom: 0;
+    font-size: 50px;
     font-weight: 700;
 }
 
@@ -64,13 +73,15 @@ header .logo h1::before {
 /* Nav bar */
 .main-menu {
     justify-content: center;
-    padding: 10px 0;
+    margin-left: 0;
+    padding: 10px 20px;
 }
 
 .main-menu>li>a {
     display: inline-block;
-    padding: 0 15px;
+    padding: 0 16px;
     color: var(--secondary-color);
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -103,7 +114,7 @@ header .logo h1::before {
 .sub-menu {
     display: none;
     position: absolute;
-    top: 52px;
+    top: 60px;
     left: 0;
     width: 200px;
     height: 80px;
@@ -126,47 +137,45 @@ header .logo h1::before {
 .introduction {
     background-color: var(--primary-color);
     color: white;
-    min-height: 500px;
     margin-bottom: 40px;
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
-.introduction-slide {
-    min-height: 500px;
+.introduction .col-md-6:first-child {
+    margin-top: 150px;
 }
+
 
 .introduction h3 {
     font-family: 'Handlee', sans-serif;
     font-size: 25px;
     font-weight: 700;
-    margin-top: 100px;
 }
 
 .introduction h1 {
     font-family: 'Handlee', sans-serif;
-    font-size: 80px;
+    font-size: 100px;
     font-weight: 900;
     padding: 20px 0;
 }
 
-.introduction .content {
-    width: 600px;
-    font-size: larger;
-}
-
-.introduction .content>p,
-.introduction .btn {
-    font-family: 'Nunito', sans-serif;
+.introduction .content>p {
+    font-size: 20px;
+    inline-size: 80%;
+    word-spacing: 5px;
 }
 
 .introduction button {
+    font-family: 'Nunito', sans-serif;
     border-radius: 30px;
     background-color: var(--secondary-color);
     border: none;
     width: 200px;
-    height: 50px;
+    height: 70px;
     margin-top: 20px;
+    font-size: 20px;
 }
+
 
 /* Service */
 .service {
@@ -175,7 +184,6 @@ header .logo h1::before {
 
 .service .item {
     background-color: rgb(240, 242, 246);
-    width: 400px;
     padding: 10px 20px;
     margin-bottom: 30px;
     display: flex;
@@ -183,7 +191,6 @@ header .logo h1::before {
 }
 
 .service i {
-    display: block;
     width: 100px;
     align-items: center;
     margin-top: 20px;
@@ -191,17 +198,23 @@ header .logo h1::before {
     font-size: 50px;
 }
 
+.service .content {
+    margin-left: 20px;
+}
+
 .service h2 {
     padding-top: 20px;
-    font-size: 27px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 .service p {
     font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-    width: 200px;
+    font-size: 25px;
+    width: 90%;
     color: black;
+    word-spacing: 3px;
+    inline-size: 300px;
 }
 
 /* About Us */
@@ -253,9 +266,6 @@ header .logo h1::before {
     border-bottom: 0.8px solid rgba(161, 159, 159, 0.5);
 }
 
-.about-us .col-md-9>ul {
-    margin-left: -25px;
-}
 
 .about-us .col-md-9>ul>li>i {
     color: var(--primary-color);
@@ -268,16 +278,17 @@ header .logo h1::before {
 }
 
 .about-us .col-md-9>ul li {
-    padding: 4px 0;
+    padding: 10px 0;
+    font-size: 20px;
 }
 
 .about-us .col-md-7 button {
     margin: 20px 0 0 12px;
-    width: 100px;
-    height: 35px;
-    font-size: small;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
     border: none;
-    border-radius: 17px;
+    border-radius: 20px;
     background-color: var(--primary-color);
     color: white
 }
@@ -318,20 +329,31 @@ header .logo h1::before {
     background-color: #f3f2f6;
     border-radius: 10px;
     overflow: hidden;
+    height: 100%;
+}
+
+.classes article>img {
+    display: block;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
 }
 
 .classes article h3 {
     margin: 20px auto 10px;
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Handlee', sans-serif;
     font-weight: bold;
     color: var(--secondary-color);
 }
 
 .classes article>p {
-    width: 70%;
-    margin: 0 auto 10px;
+    min-height: 72px;
+    width: 100%;
+    padding: 2px 15px;
+    box-sizing: border-box;
     color: gray;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    font-size: 18px;
 }
 
 .classes table {
@@ -342,19 +364,18 @@ header .logo h1::before {
 
 .classes table th,
 .classes table td {
+    padding: 5px 14px;
     border-bottom: 1px solid rgba(0, 0, 0, .12);
 }
 
 .classes table th {
-    width: 45%;
+    width: 50%;
     text-align: right;
-    padding-right: 14px;
     color: rgb(98, 98, 98);
 }
 
 .classes td {
     text-align: left;
-    padding-left: 14px;
     color: #8a8a8a;
     border-left: 1px solid rgba(0, 0, 0, .12);
 }
@@ -487,7 +508,7 @@ header .logo h1::before {
 .book-a-seat .col-md-5 button {
     box-sizing: border-box;
     width: 85%;
-    height: 50px;
+    min-height: 70px;
     margin-bottom: 20px;
     border: none;
 }
@@ -512,7 +533,7 @@ header .logo h1::before {
     background-color: var(--secondary-color);
     color: white;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* Latest blog */
@@ -558,9 +579,9 @@ header .logo h1::before {
 }
 
 .latest-blog .content h3 {
-    margin: 0 auto 10px;
+    padding: 10px 0;
     font-family: 'Handlee', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 700;
     color: var(--secondary-color);
 }
@@ -589,9 +610,9 @@ header .logo h1::before {
 }
 
 .latest-blog .content p {
-    margin: 0 auto 20px;
     font-family: 'Nunito', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
+    margin: 10px auto;
     color: #6b7c82;
     width: 80%;
 }
@@ -604,6 +625,7 @@ header .logo h1::before {
     border-radius: 30px;
     color: white;
     font-family: 'Nunito', sans-serif;
+    margin: 10px ;
 }
 
 /* Footer */
@@ -752,7 +774,7 @@ footer .quick-links li::before {
 }
 
 footer input {
-    width: 300px;
+    width: 100%;
     padding: 15px;
     margin: 10px 0;
     border: none;
@@ -762,7 +784,7 @@ footer input {
 
 footer .newsletter button {
     margin-top: 10px;
-    width: 300px;
+    width: 100%;
     height: 60px;
     border: none;
     border-radius: 30px;
@@ -789,7 +811,7 @@ footer .col-md-12 span {
 
 footer .go-to-top {
     position: fixed;
-    right: 30px;
+    right: 50px;
     bottom: 30px;
     width: 30px;
     height: 50px;
@@ -809,37 +831,402 @@ footer .go-to-top {
 }
 
 /* Responsive header */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+
+    /* Desktop page scale */
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .container {
+        max-width: none;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .row {
+        --bs-gutter-x: 24px;
+    }
+
+    /* Header */
+    header .logo-menu {
+        height: 82px;
+        padding-top: 0;
+    }
+
+    header .logo-menu .navbar {
+        min-height: 82px;
+    }
+
+    header .logo h1,
+    footer .logo h1 {
+        font-size: 40px;
+    }
+
     .main-menu {
         padding: 10px 20px;
+    }
+
+    .main-menu>li>a {
+        font-size: 16px;
+        padding: 0 16px;
     }
 
     header .logo-menu .navbar-collapse {
         justify-content: center;
     }
 
+    /* Introduction */
+    .introduction {
+        min-height: 560px;
+        margin-bottom: 40px;
+        padding-top: 0;
+    }
+
+    .introduction-slide {
+        min-height: 560px;
+    }
+
     .introduction h3 {
-        margin-top: -100px;
+        margin: 0 0 10px;
+        font-size: 24px;
+    }
+
+    .introduction .col-md-6:first-child {
+        margin-top: 150px;
+        padding-right: 50px;
+    }
+
+    .introduction h1 {
+        font-size: 72px;
+        line-height: 1.12;
+        padding: 12px 0 18px;
+    }
+
+    .introduction .content {
+        width: 560px;
+        max-width: 100%;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .introduction button {
+        width: 180px;
+        height: 48px;
+        margin-top: 18px;
+        font-size: 16px;
+    }
+
+    .introduction img {
+        object-fit: contain;
+    }
+
+    /* Service */
+    .service {
+        margin: 70px 0;
+    }
+
+    .service .item {
+        min-height: 150px;
+        padding: 22px 24px;
+        margin-bottom: 24px;
+    }
+
+    .service i {
+        width: 76px;
+        margin-top: 18px;
+        padding-left: 8px;
+        font-size: 44px;
+    }
+
+    .service .content {
+        flex: 1;
+        margin-left: 10px;
+    }
+
+    .service h2 {
+        padding-top: 0;
+        margin-bottom: 8px;
+        font-size: 26px;
+    }
+
+    .service p {
+        width: 100%;
+        max-width: 330px;
+        font-size: 16px;
+        line-height: 1.6;
+        word-spacing: normal;
+        inline-size: auto;
+    }
+
+    /* About us */
+    .about-us {
+        margin-bottom: 80px;
+    }
+
+    .about-us .col-md-5 img {
+        min-height: 460px;
+        object-fit: cover;
+    }
+
+    .about-us .col-md-7 {
+        padding-top: 50px;
+        padding-left: 30px;
+    }
+
+    .about-us article h5,
+    .classes h5,
+    .book-a-seat .col-md-7 h5,
+    .latest-blog h5 {
+        font-size: 16px;
+    }
+
+    .about-us article h2 {
+        padding: 12px 0;
+        font-size: 44px;
+    }
+
+    .about-us article p,
+    .about-us li {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .about-us .col-md-7 .row {
+        margin-top: 14px;
+    }
+
+    .about-us .col-md-9>ul {
+        margin-left: 0;
+    }
+
+    .about-us .col-md-9>ul>li {
+        padding: 7px 0;
+    }
+
+    .about-us .col-md-7 button {
+        width: 120px;
+        height: 40px;
+        margin: 20px 0 0;
+        font-size: 15px;
+    }
+
+    /* Classes */
+    .classes {
+        margin-bottom: 80px;
+    }
+
+    .classes h5 {
+        font-size: 16px;
+    }
+
+    .classes h2 {
+        padding: 10px 0 24px;
+        font-size: 40px;
+    }
+
+    .classes article h3 {
+        margin: 18px auto 8px;
+        font-size: 24px;
+    }
+
+    .classes article>p {
+        min-height: 48px;
+        width: 78%;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .classes table {
+        width: 82%;
+        margin: 14px auto 16px;
+        font-size: 15px;
+    }
+
+    .classes table th,
+    .classes table td {
+        height: 34px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .classes button {
+        width: 120px;
+        height: 40px;
+        margin: 8px auto 30px;
+        font-size: 15px;
+    }
+
+    /* Book a seat */
+    .book-a-seat {
+        margin: 80px auto;
+    }
+
+    .book-a-seat .col-md-7 {
+        margin-top: 20px;
+        padding-right: 50px;
+    }
+
+    .book-a-seat .col-md-7 h2 {
+        font-size: 46px;
+        margin: 8px 0 16px;
+    }
+
+    .book-a-seat .col-md-7>p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin: 18px 0;
+    }
+
+    .book-a-seat .col-md-7 .list {
+        gap: 16px;
+        margin: 24px 0;
+        font-size: 16px;
+    }
+
+    .book-a-seat .col-md-7 button {
+        width: 120px;
+        height: 40px;
+    }
+
+    .book-a-seat .col-md-5 th {
+        height: 84px;
+        font-size: 40px;
+    }
+
+    .book-a-seat .col-md-5 td {
+        padding: 28px 20px;
+    }
+
+    .book-a-seat form {
+        margin: 0;
+    }
+
+    .book-a-seat .col-md-5 input,
+    .book-a-seat .col-md-5 select,
+    .book-a-seat .col-md-5 button {
+        width: 85%;
+        height: 50px;
+        margin-bottom: 18px;
+        font-size: 15px;
+    }
+
+    /* Latest blog */
+    .latest-blog {
+        margin: 70px auto 90px;
+    }
+
+    .latest-blog h2 {
+        margin: 8px 0 24px;
+        padding: 8px 0;
+        font-size: 40px;
+    }
+
+    .latest-blog .content {
+        min-height: 270px;
+        padding: 24px 24px 28px;
+    }
+
+    .latest-blog .content h3 {
+        min-height: 72px;
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .latest-blog .blog-info {
+        gap: 16px;
+        font-size: 13px;
+    }
+
+    .latest-blog .content p {
+        min-height: 72px;
+        width: 88%;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .latest-blog .content button {
+        width: 120px;
+        height: 38px;
+    }
+
+    /* Footer */
+    footer {
+        padding-top: 70px;
+    }
+
+    footer .col-md-3 {
+        padding-bottom: 50px;
+    }
+
+    footer .col-md-3>.content {
+        width: 270px;
+        max-width: 100%;
+        padding: 16px 0 12px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    footer h2 {
+        font-size: 28px;
+    }
+
+    footer h3 {
+        font-size: 18px;
+    }
+
+    footer .contact-list {
+        margin: 24px 0 0;
+    }
+
+    footer .contact-list li {
+        min-height: 62px;
+    }
+
+    footer .contact-list p,
+    footer .quick-links a,
+    footer .newsletter input {
+        font-size: 15px;
+    }
+
+    footer input,
+    footer .newsletter button {
+        width: 280px;
+        max-width: 100%;
+    }
+
+    footer .newsletter button {
+        height: 54px;
+    }
+
+    footer .col-md-12 {
+        padding: 30px;
+        font-size: 15px;
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
+
+    /* Common style */
+    .container {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
     /* Header */
-    header .logo-menu {
-        padding: 24px 0;
-    }
 
     header .logo-menu .navbar-toggler {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 40px;
         padding: 0;
-        font-size: 16px;
+        font-size: 20px;
         border: 1px solid rgba(0, 51, 79, 0.15);
-        border-radius: 50%;
+        border-radius: 25%;
     }
 
     .main-menu {
@@ -848,8 +1235,9 @@ footer .go-to-top {
 
     .main-menu>li>a {
         display: block;
-        padding: 4px 12px;
+        padding: 10px 12px;
     }
+
 
     .logo-menu h1 {
         font-size: 50px;
@@ -859,9 +1247,27 @@ footer .go-to-top {
 
     /* Introduction */
     .introduction {
-        padding-top: 40px;
-        padding-bottom: 20px;
+        padding: 0;
         text-align: center;
+    }
+
+    .introduction .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .introduction .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .introduction .col-md-6:first-child {
+        margin: 30px 0;
+        padding-right: 0;
     }
 
     .introduction h3 {
@@ -870,6 +1276,7 @@ footer .go-to-top {
     }
 
     .introduction h1 {
+        width: 100%;
         max-width: 330px;
         margin-left: auto;
         margin-right: auto;
@@ -879,7 +1286,17 @@ footer .go-to-top {
 
     .introduction .content {
         width: 100%;
+        max-width: 100%;
+    }
+
+    .introduction .content>p {
+        width: 100%;
+        inline-size: auto;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 15px;
+        word-spacing: normal;
     }
 
     .introduction button {
@@ -887,7 +1304,10 @@ footer .go-to-top {
     }
 
     .introduction .col-md-6>img {
-        margin-top: 20px;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
     }
 
     /* Service */
@@ -1020,5 +1440,9 @@ footer .go-to-top {
 
     footer .col-md-12 {
         padding: 30px 12px;
+    }
+
+    footer .go-to-top {
+        display: none;
     }
 }
