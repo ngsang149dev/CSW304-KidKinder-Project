@@ -81,7 +81,7 @@ header .logo h1::before {
     display: inline-block;
     padding: 0 16px;
     color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -236,6 +236,7 @@ header .logo h1::before {
     display: flex;
     align-items: center;
     gap: 5px;
+    font-size: 20px;
 }
 
 .about-us article h5::after {
@@ -302,7 +303,7 @@ header .logo h1::before {
 
 .classes h5 {
     color: var(--primary-color);
-    font-size: 17px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     gap: 6px;
@@ -314,7 +315,7 @@ header .logo h1::before {
     width: 50px;
     height: 2px;
     background-color: var(--primary-color);
-    margin-top: 8px;
+    margin-top: 11px;
 }
 
 .classes h2 {
@@ -406,7 +407,7 @@ header .logo h1::before {
 
 .book-a-seat .col-md-7 h5 {
     color: var(--primary-color);
-    font-size: 17px;
+    font-size: 20px;
     display: flex;
     gap: 6px;
 }
@@ -416,13 +417,12 @@ header .logo h1::before {
     width: 50px;
     height: 2px;
     background-color: var(--primary-color);
-    margin-top: 9px;
-    margin-bottom: 10px;
+    margin-top: 11px;
 }
 
 .book-a-seat .col-md-7 h2 {
     margin-top: 10px;
-    font-size: 50px;
+    font-size: 70px;
     font-size: bold;
     color: var(--secondary-color);
 }
@@ -431,6 +431,7 @@ header .logo h1::before {
     width: 90%;
     font-family: 'Nunito', sans-serif;
     color: grey;
+    font-size: 20px;
     margin: 20px 0;
 }
 
@@ -448,6 +449,7 @@ header .logo h1::before {
     margin: 0;
     color: grey;
     font-family: 'Nunito', sans-serif;
+    font-size: 20px;
 }
 
 .book-a-seat .list>p::before {
@@ -461,8 +463,8 @@ header .logo h1::before {
 .book-a-seat .col-md-7 button {
     border: none;
     margin: 10px 0 0;
-    width: 120px;
-    height: 40px;
+    width: 140px;
+    height: 50px;
     border-radius: 40px;
     background-color: var(--primary-color);
     color: white;
@@ -544,7 +546,7 @@ header .logo h1::before {
 
 .latest-blog h5 {
     color: var(--primary-color);
-    font-size: 17px;
+    font-size: 20px;
     display: flex;
     gap: 6px;
     justify-content: center;
@@ -556,15 +558,14 @@ header .logo h1::before {
     width: 50px;
     height: 2px;
     background-color: var(--primary-color);
-    margin-top: 9px;
-    margin-bottom: 10px;
+    margin-top: 11px;
 }
 
 .latest-blog h2 {
     font-weight: bold;
     color: var(--secondary-color);
-    font-size: 35px;
-    margin: 10px 0;
+    font-size: 70px;
+    margin: 10px 0 20px;
     padding: 10px 0;
 }
 
@@ -620,8 +621,8 @@ header .logo h1::before {
 .latest-blog .content button {
     border: none;
     background-color: var(--primary-color);
-    width: 120px;
-    height: 35px;
+    width: 160px;
+    height: 50px;
     border-radius: 30px;
     color: white;
     font-family: 'Nunito', sans-serif;
@@ -637,8 +638,9 @@ footer {
 }
 
 footer .logo h1 {
-    font-weight: 700;
+    font-weight: bold;
     color: white;
+    font-size: 50px;
 }
 
 footer .col-md-3 {
@@ -646,8 +648,9 @@ footer .col-md-3 {
 }
 
 footer .col-md-3>.content {
-    width: 270px;
+    width: 90%;
     padding: 10px 0;
+    font-size: 20px;
 }
 
 footer .links {
@@ -698,17 +701,17 @@ footer .logo h1::before {
 footer h2 {
     font-family: 'Handlee', sans-serif;
     color: var(--primary-color);
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
 }
 
 footer h3 {
     font-family: 'Handlee', sans-serif;
-    font-size: 20px;
+    font-size: 27px;
 }
 
-footer .col-md-3>.content p {
-    font-size: 15px;
+footer .contact-list li p {
+    font-size: 20px;
 }
 
 footer .contact-list {
@@ -719,7 +722,7 @@ footer .contact-list {
 footer .contact-list li {
     position: relative;
     min-height: 48px;
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
 footer .contact-list li::before {
@@ -758,11 +761,12 @@ footer .quick-links a {
     display: inline-block;
     color: white;
     padding-left: 18px;
+    font-size: 20px;
 }
 
 footer .quick-links li {
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 footer .quick-links li::before {
@@ -830,14 +834,8 @@ footer .go-to-top {
     color: white;
 }
 
-/* Responsive header */
+/* Responsive */
 @media (max-width: 768px) {
-
-    /* Desktop page scale */
-    body {
-        font-size: 16px;
-        line-height: 1.5;
-    }
 
     .container {
         max-width: none;
@@ -845,13 +843,9 @@ footer .go-to-top {
         padding-right: 12px;
     }
 
-    .row {
-        --bs-gutter-x: 24px;
-    }
-
     /* Header */
     header .logo-menu {
-        height: 82px;
+        height: auto;
         padding-top: 0;
     }
 
@@ -1210,23 +1204,17 @@ footer .go-to-top {
 
     /* Common style */
     .container {
-        width: 100%;
-        padding-left: 16px;
-        padding-right: 16px;
+        width: 90%;
     }
 
     /* Header */
+    header .logo-menu {
+        height: auto;
+    }
 
     header .logo-menu .navbar-toggler {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 60px;
         height: 40px;
-        padding: 0;
-        font-size: 20px;
-        border: 1px solid rgba(0, 51, 79, 0.15);
-        border-radius: 25%;
     }
 
     .main-menu {
@@ -1238,22 +1226,10 @@ footer .go-to-top {
         padding: 10px 12px;
     }
 
-
-    .logo-menu h1 {
-        font-size: 50px;
-        font-weight: 800;
-        margin-bottom: 0;
-    }
-
     /* Introduction */
     .introduction {
         padding: 0;
         text-align: center;
-    }
-
-    .introduction .row {
-        margin-left: 0;
-        margin-right: 0;
     }
 
     .introduction .col-md-6 {
@@ -1261,8 +1237,7 @@ footer .go-to-top {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        padding: auto 0;
     }
 
     .introduction .col-md-6:first-child {
@@ -1301,6 +1276,7 @@ footer .go-to-top {
 
     .introduction button {
         width: 180px;
+        height: 60px;
     }
 
     .introduction .col-md-6>img {
@@ -1312,7 +1288,7 @@ footer .go-to-top {
 
     /* Service */
     .service {
-        margin: 50px 0;
+        margin: 100px auto;
     }
 
     .service .item {
@@ -1323,6 +1299,8 @@ footer .go-to-top {
         width: 55px;
         padding-left: 8px;
         font-size: 28px;
+        margin-top: 1px;
+        margin-right: -15px;
     }
 
     .service h2 {
@@ -1338,11 +1316,9 @@ footer .go-to-top {
         margin-bottom: 40px;
     }
 
-    .about-us article h5,
-    .classes h5,
-    .book-a-seat .col-md-7 h5,
-    .latest-blog h5 {
-        font-size: 14px;
+    .about-us article h5 {
+        margin-top: 20px;
+        font-size: 16px;
     }
 
     .about-us .col-md-7 {
@@ -1361,21 +1337,33 @@ footer .go-to-top {
         width: 60%;
     }
 
-    .about-us .col-md-7 .col-md-9>ul {
-        margin-left: 0;
+    .about-us .col-md-7 .col-md-9>ul li {
+        font-size: 16px;
     }
 
     /* Classes */
+    .classes {
+        margin: 60px auto;
+    }
     .classes h2 {
         font-size: 30px;
     }
 
-    .classes article {
+    .classes h5::before, .classes h5::after {
+        margin-top: 8px;
+    }
+
+    .classes .col-md-4 {
         margin-bottom: 40px;
     }
 
+    .classes .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+
     .classes article>p {
-        width: 85%;
+        width: 100%;
+        margin: auto auto;
     }
 
     /* Book a seat */
